@@ -1,6 +1,11 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 
+//路径
+import {rootBase,listPath} from './pathConfig.js';
+
+
+//组件
 import App from '../pages';
 import Home from '../pages/Home';
 import List from '../pages/List';
@@ -14,9 +19,9 @@ class RouterMap extends React.Component {
     render() {
         return (
             <Router history={this.props.history}>
-                <Route path='/' component={App}>
+                <Route path={rootBase} component={App}>
                     <IndexRoute component={Home}/>
-                    <Route path="/list/:name/:age" component={List}/>
+                    <Route path={listPath} component={List}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

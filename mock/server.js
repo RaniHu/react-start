@@ -6,6 +6,8 @@ var router = require('koa-router')();
 // 首页导航模拟数据
 var homeNavData = require('./home/nav.js');
 router.get('/api/homeNav', function *(next) {
+
+    // 返回数据
     this.body = homeNavData
 });
 
@@ -21,6 +23,7 @@ router.get('/api/list/:name/:age', function *(next) {
     console.log('姓名:' + paramsName)
     console.log('年龄:' + paramsAge)
 
+    // 返回数据
     this.body = ListPageData
 });
 

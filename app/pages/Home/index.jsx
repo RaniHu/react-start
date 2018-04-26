@@ -3,6 +3,9 @@ import React from 'react';
 //组件
 import List from '../List';
 
+//样式
+import '../../static/css/home.scss';
+
 //数据
 import {getHomeNavData}  from '../../fetch/home/home.js';
 
@@ -40,9 +43,10 @@ class Home extends React.Component {
 
 
     render() {
+
+
         return (
-            <div>
-               <p> this is home page!</p>
+            <div id="home-container">
                <ul>
                     {
                         this.state.data.map(function(item,index){
@@ -53,6 +57,7 @@ class Home extends React.Component {
                 
                     }
                </ul>
+               <p>this is list component!</p>
                <List/>
             </div>
         
